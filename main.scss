@@ -1,0 +1,77 @@
+@use 'sass:math';
+
+$height: 2em;
+$width: $height;
+$color: #f46e6e;
+$itemCount: 60;
+$degree: math.div(360deg, $itemCount);
+$duration: 1s;
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: math.div($height, 5);;
+  height: math.div($width, 5);
+  
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $height;
+    height: $height;
+    transform: translate(-50%, -50%);
+    background-color: $color;
+    border-radius: 50%;
+    content: '';
+  }
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+  background-color: $color;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    transform: rotateY(-90deg) translateZ(math.div($height, 2));
+    content: '';
+    backface-visibility: visible;
+  } 
+}
+
+@for $i from 1 through $itemCount {
+  .item:nth-child(#{$i}) {
+    transform: rotateY(90deg) rotateX($i * $degree) translateZ($height);
+    animation: itemOffset#{$i} $duration ease-in-out infinite reverse;
+    animation-delay: math.div(($i) * $duration, 10);
+  }
+
+  @keyframes itemOffset#{$i}{
+    50% {
+      transform: rotateY(90deg) rotateX($i * $degree) translateZ($height * 6);
+      background-color: hsl(($i * $degree), 50%, 50%);
+    }
+  }
+}
+
+body {
+  height: 100vh;
+  background: lighten(#3E4777, 0%);
+  background-image: 
+    radial-gradient(center, rgba(white,0.1), transparent 75%);
+}
+
+body * {
+  transform-style: preserve-3d;
+}
