@@ -1,8 +1,8 @@
 @use 'sass:math';
 
-$height: 2em;
+$height: 1em;
 $width: $height;
-$color: #f46e6e;
+$color: #252422;
 $itemCount: 60;
 $degree: math.div(360deg, $itemCount);
 $duration: 1s;
@@ -60,14 +60,15 @@ $duration: 1s;
   @keyframes itemOffset#{$i}{
     50% {
       transform: rotateY(90deg) rotateX($i * $degree) translateZ($height * 6);
-      background-color: hsl(($i * $degree), 50%, 50%);
+      // background-color: hsl(($i * $degree), 50%, 50%);
+      background-color: #252422;
     }
   }
 }
 
 body {
   height: 100vh;
-  background: lighten(#3E4777, 0%);
+  background: lighten(#FDFDFD, 0%);
   background-image: 
     radial-gradient(center, rgba(white,0.1), transparent 75%);
 }
