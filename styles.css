@@ -1,5 +1,6 @@
 :root {
     --text-color: #252422;
+    --link-text-hover: #CCC5B9;
 }
 *{
     box-sizing: border-box;
@@ -19,16 +20,42 @@
     justify-content: space-evenly;
     height: 100vh;
 }
+#flower{
+    font-size: 40px;
+}
 #home-right-side{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
 }
 .menu{
     display: flex;
     flex-direction: column;
     align-items: start;
+    font-size: 50px;
+    padding-top: 50px;
+}
+.menu a{
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: var(--link-text-hover);
 }
 #portfolio-owner{
     font-weight: 300 !important;
+    font-size: 50px;
+}
+#portfolio-field{
+    font-size: 35px;
+}
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
 }
