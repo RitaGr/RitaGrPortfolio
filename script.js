@@ -37,3 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Update the currentActiveLink to the currently clicked link
             currentActiveLink = link;
         }
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }

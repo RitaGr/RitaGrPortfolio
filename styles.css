@@ -59,3 +59,9 @@
     margin-right: 5px;
     vertical-align: middle;
 }
+
+
+.dark-mode {
+    background-color: #252422;
+    color: white !important;
+}
