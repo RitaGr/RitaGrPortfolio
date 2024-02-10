@@ -59,3 +59,43 @@
     margin-right: 5px;
     vertical-align: middle;
 }
+.about-me{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    width: 100%;
+    padding: 50px;
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+h1{
+    font-size: 48px;   
+}
+#about-me h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+#skills-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#more-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+#more-info h1{
+    width: calc(100/2);
+}
+.about-me-section{
+    display: flex;
+    flex-direction: column;
+}
+
