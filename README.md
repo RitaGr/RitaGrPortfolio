@@ -2,7 +2,7 @@
 My portfolio of projects 
 
 # :love_letter: Content
-### :rabbit2: About me
+### :rabbit2: About Me Section
 * Information about my education
   
 * Information about my work experience
@@ -11,7 +11,7 @@ My portfolio of projects
   
 * My software and personal skills
   
-### :mortar_board: Projects
+### :mortar_board: Projects Section
 * My personal, solo  projects
 * Team work projects
 * Small projects made during my self learning from Open Sources
