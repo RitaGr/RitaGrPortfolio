@@ -16,11 +16,11 @@ My portfolio of projects
 * Team work projects
 * Small projects made during my self learning from Open Sources
 
-  # :hammer: Used Technologies
-  * `HTML`
-  * `CSS`
-  * `JavaScrip`
-  * `SASS`
+# :hammer: Used Technologies
+* `HTML`
+* `CSS`
+* `JavaScrip`
+* `SASS`
 
 
 ## :cherry_blossom: Inspiration
