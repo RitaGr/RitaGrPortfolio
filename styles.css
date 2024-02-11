@@ -59,43 +59,65 @@
     margin-right: 5px;
     vertical-align: middle;
 }
-.about-me{
+.about-me-section{
+    display: grid;
+    justify-content: center;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly ;
-    width: 100%;
-    padding: 50px;
+    padding: 50px 50px;
+    grid-template-columns: repeat(2, 1fr);
 }
-#info{
+.about-me-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
+    padding: 20px 50px;
+}
+.about-me-container ul{
+    padding-left: 30px;
+}
+.about-me-container ul li{
+    font-size: 18px;
+}
+.about-me-section h2{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+}
+#links-info li{
+    font-size: 24px;
+}
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#last-row-grid{
+    grid-column: 1 / 3;
+}
+.sub-skills-container{
+    display: flex;
+    flex-direction: column;
 }
 h1{
     font-size: 48px;   
 }
-#about-me h2{
-    font-size: 24px;
-    font-weight: 600;
-}
-#skills-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-#more-info{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-}
-#more-info h1{
-    width: calc(100/2);
-}
-.about-me-section{
-    display: flex;
-    flex-direction: column;
+
+
+.projects-section{
+    height: 100vh;
 }
 
+.reveal-section {
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hidden-content {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}

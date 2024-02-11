@@ -37,3 +37,46 @@ document.addEventListener("DOMContentLoaded", function() {
             // Update the currentActiveLink to the currently clicked link
             currentActiveLink = link;
         }
+
+        // smooth transition to the content on the page
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.menu a');
+        
+            links.forEach(link => {
+                link.addEventListener('click', smoothScroll);
+            });
+        
+            function smoothScroll(e) {
+                e.preventDefault();
+        
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+        
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // scrolling animation hide-reveal
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealSection = document.querySelector('.reveal-section');
+            const hiddenContent = document.querySelector('.hidden-content');
+        
+            window.addEventListener('scroll', revealOnScroll);
+        
+            function revealOnScroll() {
+                const revealPosition = revealSection.getBoundingClientRect().top;
+        
+                // Adjust the value below to control when the content is revealed
+                const revealThreshold = window.innerHeight * 0.8;
+        
+                if (revealPosition < revealThreshold) {
+                    revealSection.style.opacity = 1;
+                    hiddenContent.style.opacity = 1;
+                    window.removeEventListener('scroll', revealOnScroll); // Optional: Remove the event listener after revealing
+                }
+            }
+        });
