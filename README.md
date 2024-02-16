@@ -7,8 +7,6 @@ My portfolio of projects
   
 * Information about my work experience
   
-* My contact information and useful links
-  
 * My software and personal skills
   
 ### :mortar_board: Projects Section
@@ -29,3 +27,11 @@ My portfolio of projects
 
 ## :seedling: Used code
 - [Flower by Russell Kitchen](https://codepen.io/russellk/pen/wWapeY).
+
+# Process
+### Initial Page Structure Drawbacks
+* My contact information and useful links in the About Me section was not the best UX friendly structure.
+* The empty space in the middle of the page was awkward looking and not right
+* Too much information and chaos
+![image](https://github.com/RitaGr/RitaGrPortfolio/assets/83710658/2afcfd09-c9d8-4de7-a291-3f1f79910771)
+
