@@ -80,3 +80,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
+
+//
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('moon');
+    const body = document.body;
+    const root = document.documentElement; // Select the :root element
+
+    toggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        toggleBtn.classList.toggle('disabled');
+        root.classList.toggle('dark-mode'); // Toggle dark mode on :root as well
+    });
+    
+    toggleBtn.addEventListener('mousedown', function() {
+        toggleBtn.classList.add('active');
+      });
+  
+      toggleBtn.addEventListener('mouseup', function() {
+        toggleBtn.classList.remove('active');
+      });
+});
