@@ -30,6 +30,10 @@ a{
     color: #fff;
     background-color: #fff;
 }
+.dark-mode .item::after{
+    color: #fff;
+    background-color: #fff;
+}
 .dark-mode .rect{
     border-color: #fff;
 }
@@ -38,6 +42,12 @@ a{
 }
 .dark-mode .icon{
     filter: brightness(0) invert(1);
+}
+.dark-mode #container::after{
+    background-color: #fff;
+}
+.dark-mode #flower{
+    background-color: #fff;
 }
 .home-container{
     display: flex;
@@ -124,10 +134,10 @@ a{
     padding-left: 30px;
 }
 .about-me-container ul li{
-    font-size: 18px;
+    font-size: 24px;
 }
 .about-me-section h2{
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 500;
     padding: 20px 0;
 }
@@ -135,7 +145,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 36px;
     align-items: center;
 }
 #links-info li{

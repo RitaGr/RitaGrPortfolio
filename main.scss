@@ -8,25 +8,6 @@ $degree: math.div(360deg, $itemCount);
 $duration: 1s;
 $backgroundColor-dark: #fff;
 
-.dark-mode {
-  // Override background color for dark mode
-  .container {
-    background-color: $backgroundColor-dark;
-  }
-
-  .item {
-    background-color: $backgroundColor-dark;
-  }
-
-  // Add more overrides as needed for other elements
-  @for $i from 1 through $itemCount {
-    .item:nth-child(#{$i}) {
-      // Additional styles for dark mode
-      background-color: $backgroundColor-dark;
-    }
-  }
-}
-
 .container {
   position: absolute;
   top: 50%;
@@ -82,8 +63,6 @@ $backgroundColor-dark: #fff;
       transform: rotateY(90deg) rotateX($i * $degree) translateZ($height * 6);
       // background-color: hsl(($i * $degree), 50%, 50%);
     }
-    
-    // In dark mode, override the background color
   }
 }
 
@@ -97,4 +76,3 @@ body {
 body * {
   transform-style: preserve-3d;
 }
-
