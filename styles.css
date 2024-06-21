@@ -28,10 +28,8 @@ a{
 }
 .dark-mode .item{
     color: #fff;
-    background-color: #fff;
 }
 .dark-mode .item::after{
-    color: #fff;
     background-color: #fff;
 }
 .dark-mode .rect{
@@ -44,9 +42,6 @@ a{
     filter: brightness(0) invert(1);
 }
 .dark-mode #container::after{
-    background-color: #fff;
-}
-.dark-mode #flower{
     background-color: #fff;
 }
 .home-container{
@@ -78,9 +73,6 @@ a{
 }
 #flower{
     font-size: 40px;
-}
-.flower-dark-mode{
-    background-color: #fff;
 }
 #home-right-side{
     display: flex;
@@ -124,6 +116,7 @@ a{
     height: 100vh;
     padding: 50px 50px;
     grid-template-columns: repeat(2, 1fr);
+    overflow: scroll;
 }
 .about-me-container{
     display: flex;
@@ -137,7 +130,7 @@ a{
     font-size: 24px;
 }
 .about-me-section h2{
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 500;
     padding: 20px 0;
 }
@@ -145,7 +138,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 36px;
+    font-size: 24px;
     align-items: center;
 }
 #links-info li{
@@ -170,6 +163,20 @@ h1{
     justify-content: center;
     align-items: center;
 }
+/* .projects-section .material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz'  48;
+  color : var(--text-color);
+  font-size: 50px;
+}
+.projects-section .heart-grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .contact-me-section{
     height: 100vh;
