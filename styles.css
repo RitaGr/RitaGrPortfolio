@@ -26,6 +26,13 @@ a{
 .dark-mode a{
     color: #fff;
 }
+.dark-mode .item{
+    color: #fff;
+    background-color: #fff;
+}
+.dark-mode .rect{
+    border-color: #fff;
+}
 .dark-mode .dot{
     background-color: #fff;
 }
@@ -39,6 +46,7 @@ a{
     height: 100vh;
 }
 .material-symbols-outlined {
+   margin-top: 50px;
   font-variation-settings:
   'FILL' 100,
   'wght' 100,
