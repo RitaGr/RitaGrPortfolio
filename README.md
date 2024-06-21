@@ -1,6 +1,5 @@
 # Junior Frontend Developer Portfolio
-live [https://ritagr.github.io/RitaGrPortfolio/](live)
-My portfolio of projects 
+ [My portfolio of projects ]([live](https://ritagr.github.io/RitaGrPortfolio/))
 
 # :love_letter: Content
 ### :rabbit2: About Me Section
