@@ -1,6 +1,7 @@
 :root {
     --text-color: #252422;
     --link-text-hover: #CCC5B9;
+    --dark-mode-light: #FFFCF2;
 }
 *{
     box-sizing: border-box;
@@ -34,6 +35,7 @@ a{
 }
 .dark-mode .rect{
     border-color: #fff;
+    background-color: var(--dark-mode-light);
 }
 .dark-mode .dot{
     background-color: #fff;
@@ -160,8 +162,13 @@ h1{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    overflow: scroll;
+}
+.projects-section #projects-title{
+    width: 100%;
+    text-align: center;
+    padding: 50px 70px;
 }
 /* .projects-section .material-symbols-outlined{
   font-variation-settings:
