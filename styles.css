@@ -34,7 +34,6 @@ a{
     background-color: #fff;
 }
 .dark-mode .rect{
-    border-color: #fff;
     background-color: var(--dark-mode-light);
 }
 .dark-mode .dot{
