@@ -35,6 +35,10 @@ a{
 }
 .dark-mode .rect{
     background-color: var(--dark-mode-light);
+    color:var(--text-color);
+}
+.dark-mode .rect a{
+    color:var(--text-color);
 }
 .dark-mode .dot{
     background-color: #fff;
