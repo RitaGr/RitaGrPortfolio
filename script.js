@@ -108,3 +108,41 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const emailElement = document.querySelector('#contact-email');
+    const modal = document.getElementById('email-modal');
+    
+    emailElement.addEventListener('click', function() {
+        const rect = emailElement.getBoundingClientRect();
+        modal.style.top = `${rect.top - modal.offsetHeight}px`;
+        modal.style.left = `${rect.left + rect.width / 2}px`;
+        modal.style.transform = 'translate(-50%, -10px)'; // Adjust the position above the email
+        openModal();
+    });
+});
+
+function openModal() {
+    document.getElementById('email-modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('email-modal').style.display = 'none';
+}
+
+function redirectToEmail() {
+    const subject = encodeURIComponent('Contact Regarding Portfolio');
+    const body = encodeURIComponent('Hello Margarita,\n\nI would like to discuss...');
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=ritagrushovets2002@gmail.com&su=${subject}&body=${body}`;
+    window.open(mailtoLink, '_blank');
+    closeModal();
+}
+
+// Close the modal when the user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('email-modal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

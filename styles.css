@@ -197,6 +197,9 @@ h1{
 .contact-me-info h1::selection{
     color: plum;
 }
+.contact-me-info h1:hover{
+    color: plum;
+}
 .contact-me-links{
     display: flex;
     flex-direction: row;
@@ -234,3 +237,61 @@ h1{
 .nav-icon:hover {
     color: var(--link-text-hover);
 }
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+    width: 300px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.modal-content {
+    background-color: var(--dark-mode-light);
+    color: var(--text-color);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--dark-mode-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: var(--dark-mode-light);
+    color: var(--text-color);
+}
+
+

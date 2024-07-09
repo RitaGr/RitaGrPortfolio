@@ -184,11 +184,8 @@
     </section>
     <hr>
     <section class="contact-me-section" id="contact-me">
-        <div class="nav-icons">
-            <span class="nav-icon" onclick="scrollToSection('projects')">&#x25B2;</span>
-        </div>
         <span class="contact-me-info">
-            <h1>ritagrushovets2002@gmail.com</h1>
+            <h1 id="contact-email">ritagrushovets2002@gmail.com</h1>
             <span class="contact-me-links">
                 <a href="https://www.linkedin.com/in/margarita-grushovets/" target="_blank"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACR0lEQVR4nO2av2sUQRzFP/6IEFFjuiQWVqJFrBKE2FudaKW2Fjb2asAiCIY0Bhv9C2wl2AmCF8QgiCliJSJioSgoIjERE1Gz4StvYVnu5mY3e7lZnAcLd2++O/PezXxnZncOIiIiyuI00AR+AEmPr1VpaRQ1MR2A+KTNdbNIT9gN68AVYJjeYxi4Kk2Jb8/MK9hMhIZr0mbDrCNWFTxEeBiSthWf4HQshorEV99/YWQCeAh8Bj4BD4DRanV234jNZn9aTIdrwBg1MvJSvK0xB4F9mtONe1y93u4Z+S5+b4Y7IM7KamPkifgZYEAmboh7Xr3e7hmxPPjZIkdstR2nZrPWEeAe8B74WNdZKxQkWzXyzLEjXfCM6QMuAHPABw3LZc2Is8Cx7TDSaXvtE/O6Q/lv4DawezuMuHifH+EVcAk4DOwB9gMngbvAL8VY7u0M0Yit/hvAlEOg4QTwRXVMFtRXSnA7vl3MOeB85vsuR/unVMey1itfHaUEt+Ndjdi25g7wVTG26byloZXHI8VcDs2IbWuWMuV/M58Xgf5c/EWV3Q/NyHXxb4DjmpUsH96Jt0fYLI6KfxuakUXxZ3L8WfEvcvxAJk+CMvJN/GCOHxRv5VnsEL8RmhFX41tpz4lohNgjxKHlQswRYo4Qc8QFn4ejVpdvTJl6K10QFxyNPS0QU6beSo2EgsRX34oCQzhyy+NQkVe0TQXbmV1omCxy9NZQ8LoeeEboPUZkIn3L4n1MnR4X1Pp4OkVDXZgejtbyDwMRERH8wyblE3u1pGweRwAAAABJRU5ErkJggg=="></a>
                 <a href="https://github.com/RitaGr" target="_blank"><svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
@@ -197,6 +194,20 @@
                 <a href="https://codepen.io/rita-gr" target="_blank"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEmUlEQVR4nO2aXYiVVRSGn5zUVMqyHyssJqmQLJkKEvpDEmQQlEoqpRALzavwSqK8qYsBvRCKMcEEg24sCyGni7BMBDM0yDQ0zaIsNQvt1yQtO7HhXfCyO9935nSOjufkgs2cs9fae621z9rvWuv7Bs7R/4+GarQ03Q3sBj4D7qEFaSTwInAKqGj8DbwKXEqL0IPAQRl/Anhe44TmDgEzOIvpKuAN+wU+AMYb/wbgfeP3AddyFtF5wJPALzLwZ2ABMKhAdjZwVLLHgKeBDgaYxuvk45TXAleLNwJYarJLNYdk1tq6LcDNA2A/g3WSf1jcP2T8ScDn4gWlz18B3TY3DfhGvJPAYuCCMw2pjkSjxEt/V9hJ547EWANcofmLhHB/ifcFMPl0OnAx8LKMTwp3AXdZ7M8Bjoj3e4kjwTuiNWkt2muXHdBK4JJmO5FC4NssBCJbjwXWm6EbgRtLHLkOeMe+bwLGFYTsYYFDw5Qu5ZumdDNwk3jnC52Oifej0CtOuMiRoHSnvtfcceA5YIh41wMbbM3b/xWqa0FqF/BRFvOXZ3vUcgSFzgoL1x3ARLNhdhaudUF1gsEPs8Q1RrzhCqu4mF8CUwr26Y8jQfcCe8Q/JecuFO9KAUqs/xi4vZYTPboDFd2J6cabCnwt3p9yaFjJXvU4gvZarL0r0pV0Bk3P7mmytabyXjuR0cBq421TaBVRSnrLShxZZomxGnVJR8ivlg3Ipt5+HMq/BFIo7bT5DTVi9E5gnxWMzxrvGSsc9xl0V6OO7LLvlC1FdtZ0JC6k/yLr7ISCEhQvsbvzCTDBeAHVE8SrSHZJlaZrtO6l/yJ5Pqnbkcfs8yxBbOL/ANyv+VuBT+3u9BiMdgmJdlg4DpFM3IW09jbxHtDeAedJZ9CjjTgS0BrN0Jgs+b1r4LDHoDPlmEUWShFqi8RDsoFUaY/3THa9IWXS/XqdwFF4QQ9asZfw/SklsYDLFwzBUpbeaqVGr0bkiq2WyYdpbXSSx7V3JNVua9Ka4kgYtdwuXTLmLVW6KFkuMAf3Z8XfZM2FwZ5gJ2mvcfo+QrrC+aY5stDqn70WQkGdqrFC/hX17TmNFC/kNmqt00TpqEjnwmY6Mh/4zXoPT1SJ7jDlJ6W8Woc4SLy4V3u11mmqdFSkc36zQyugcJQVlMstHIZn4bApO+1OzRWF6Uvq++OCv1ZFf8OOpMLtYZufZX132QVNRefjGlGAHioBjqMZ5D5iRWPDjqxT4ZboMsFxyO0ugUyXq/QDyn2vNdKFdPc16sgTWXP1nfi/AnMLktjMLIn9pOHJdWaWXNMeieZq74p0TSuwpW5HoqdeVQNpysqKazSqlTt9VcqdzgwBV8mGWnaWCqSEtT3rEFM7WkTzDN0OZL3KFM0FGiXZIhosXaF3e9Yy9NuRRsr4sWZEQqegQLPNkjmtZXxPkxqrjhKk6TgTjVWiW9qh1W2rhw9t9Tio7R7Q5WGwstUfmbbVQ+x6Xit06xVC7sgB6/UH/LVC/lRySyu/6Gm7V29t9TI0pxnWqrbk6+m2+4cBp8gN6VnvfbQ4DW2Hf6o5R9RJ/wAA87e0PYnlOAAAAABJRU5ErkJggg=="></a>
             </span>
         </span>
+        <div class="nav-icons">
+            <span class="nav-icon" onclick="scrollToSection('projects')">&#x25B2;</span>
+        </div>
+         <!-- Modal window -->
+    <div id="email-modal" class="modal">
+        <div class="modal-content rect black">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Would you like to send an email to ritagrushovets2002@gmail.com?</p>
+            <div class="button-row">
+                <button onclick="redirectToEmail()">Yes</button>
+                <button onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
     </section>
 </body>
 </html>
