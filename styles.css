@@ -11,11 +11,15 @@
     font-weight: 100;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 *::-webkit-scrollbar{
     display: none;
 }
 body{
     color: var(--text-color);
+    user-select: none; /* Disable text selection globally */
 }
 a{
     color: var(--text-color);
@@ -54,6 +58,7 @@ a{
     flex-direction: row-reverse;
     justify-content: space-evenly;
     height: 100vh;
+    position: relative;
 }
 .material-symbols-outlined {
    margin-top: 50px;
@@ -122,6 +127,7 @@ a{
     padding: 50px 50px;
     grid-template-columns: repeat(2, 1fr);
     overflow: scroll;
+    position: relative;
 }
 .about-me-container{
     display: flex;
@@ -160,46 +166,36 @@ a{
 h1{
     font-size: 48px;   
 }
-
 .projects-section{
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    position: relative;
 }
 .projects-section #projects-title{
     width: 100%;
     text-align: center;
     padding: 50px 70px;
 }
-/* .projects-section .material-symbols-outlined{
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 100,
-  'GRAD' 0,
-  'opsz'  48;
-  color : var(--text-color);
-  font-size: 50px;
-}
-.projects-section .heart-grid div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .contact-me-section{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    user-select: text; /* Re-enable text selection for the contact-me section */
 }
 .contact-me-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.contact-me-info h1::selection{
+    color: plum;
 }
 .contact-me-links{
     display: flex;
@@ -218,4 +214,23 @@ h1{
 }
 .hidden{
     display: none;
+}
+.contact-me-links .icon:hover{
+    transform: scale(1.25);
+}
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.nav-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+.nav-icon:hover {
+    color: var(--link-text-hover);
 }

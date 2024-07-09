@@ -1,103 +1,110 @@
-// JavaScript code to generate items
 document.addEventListener("DOMContentLoaded", function() {
     var container = document.getElementById("container");
   
     for (var i = 1; i <= 60; i++) {
-      var item = document.createElement("div");
-      item.className = "item";
-      container.appendChild(item);
+        var item = document.createElement("div");
+        item.className = "item";
+        container.appendChild(item);
     }
-  });
 
-  var currentActiveLink = null;
+    var currentActiveLink = null;
 
-        // Set the home link as initially active
-        window.onload = function () {
-            var homeLink = document.getElementById('home');
-            updateText(homeLink);
-        };
-
-        function updateText(link) {
-            // If there's a previously clicked link, restore its text
-            if (currentActiveLink) {
-                currentActiveLink.textContent = currentActiveLink.dataset.originalText;
-            }
-
-            // Store the original text content in a data attribute
-            link.dataset.originalText = link.textContent;
-
-            // Create a span element with a class of "dot"
-            var dotElement = document.createElement('span');
-            dotElement.className = 'dot';
-
-            // Replace the link text with the created dot element
-            link.textContent = '';
-            link.appendChild(dotElement);
-
-            // Update the currentActiveLink to the currently clicked link
-            currentActiveLink = link;
+    function updateText(link) {
+        if (currentActiveLink) {
+            currentActiveLink.textContent = currentActiveLink.dataset.originalText;
         }
 
-        // smooth transition to the content on the page
+        link.dataset.originalText = link.textContent;
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.menu a');
-        
-            links.forEach(link => {
-                link.addEventListener('click', smoothScroll);
-            });
-        
-            function smoothScroll(e) {
+        var dotElement = document.createElement('span');
+        dotElement.className = 'dot';
+
+        link.textContent = '';
+        link.appendChild(dotElement);
+
+        currentActiveLink = link;
+    }
+
+    function smoothScroll(targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
+    function handleNavigation() {
+        const links = document.querySelectorAll('.menu a');
+        const sections = Array.from(links).map(link => document.getElementById(link.getAttribute('href').substring(1)));
+
+        let currentSectionIndex = -1;
+
+        function updateActiveLink() {
+            let newSectionIndex = sections.findIndex(section => section.getBoundingClientRect().top < window.innerHeight * 0.5);
+
+            if (newSectionIndex !== -1 && newSectionIndex !== currentSectionIndex) {
+                updateText(links[newSectionIndex]);
+                currentSectionIndex = newSectionIndex;
+            }
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-        
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-        
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+                smoothScroll(targetElement);
+                updateText(this);
+            });
         });
 
-        // scrolling animation hide-reveal
-        document.addEventListener('DOMContentLoaded', function() {
-            const revealSection = document.querySelector('.reveal-section');
-            const hiddenContent = document.querySelector('.hidden-content');
-        
-            window.addEventListener('scroll', revealOnScroll);
-        
-            function revealOnScroll() {
-                const revealPosition = revealSection.getBoundingClientRect().top;
-        
-                // Adjust the value below to control when the content is revealed
-                const revealThreshold = window.innerHeight * 0.8;
-        
-                if (revealPosition < revealThreshold) {
-                    revealSection.style.opacity = 1;
-                    hiddenContent.style.opacity = 1;
-                    window.removeEventListener('scroll', revealOnScroll); // Optional: Remove the event listener after revealing
-                }
-            }
-        });
+        window.addEventListener('scroll', updateActiveLink);
+        window.addEventListener('load', updateActiveLink);
+    }
 
-//
-document.addEventListener('DOMContentLoaded', function() {
+    handleNavigation();
+
+    // Scrolling animation hide-reveal
+    const revealSection = document.querySelector('.reveal-section');
+    const hiddenContent = document.querySelector('.hidden-content');
+
+    function revealOnScroll() {
+        const revealPosition = revealSection.getBoundingClientRect().top;
+        const revealThreshold = window.innerHeight * 0.8;
+
+        if (revealPosition < revealThreshold) {
+            revealSection.style.opacity = 1;
+            hiddenContent.style.opacity = 1;
+            window.removeEventListener('scroll', revealOnScroll);
+        }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Dark mode toggle
     const toggleBtn = document.getElementById('moon');
     const body = document.body;
-    const root = document.documentElement; // Select the :root element
+    const root = document.documentElement;
 
     toggleBtn.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
         toggleBtn.classList.toggle('disabled');
-        root.classList.toggle('dark-mode'); // Toggle dark mode on :root as well
+        root.classList.toggle('dark-mode');
     });
-    
+
     toggleBtn.addEventListener('mousedown', function() {
         toggleBtn.classList.add('active');
-      });
-  
-      toggleBtn.addEventListener('mouseup', function() {
+    });
+
+    toggleBtn.addEventListener('mouseup', function() {
         toggleBtn.classList.remove('active');
-      });
+    });
+
+    // Smooth scrolling for navigation icons
+    window.scrollToSection = function(sectionId) {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+            smoothScroll(targetElement);
+        }
+    };
 });
