@@ -186,6 +186,8 @@ h1{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.contact-me-section h1{
     user-select: text; /* Re-enable text selection for the contact-me section */
 }
 .contact-me-info{
@@ -293,5 +295,3 @@ h1{
     background-color: var(--dark-mode-light);
     color: var(--text-color);
 }
-
-
