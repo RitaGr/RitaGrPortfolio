@@ -58,6 +58,9 @@
     transform: translateY(-1px);
     margin-top: 10px;
 }
+.under-construction{
+    background-color: var(--text-color);
+}
 .large{
     width: 206px;
     height: 206px;
