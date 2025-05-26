@@ -23,6 +23,7 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .small .links{
     font-size: 12px;
     visibility: hidden;
@@ -36,6 +37,9 @@
 .links a{
     text-decoration: none;
     padding: 10px;
+}
+.links a:hover{
+    color: plum;
 }
 .rect h1{
     text-align: center;
