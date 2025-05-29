@@ -1,17 +1,5 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .menu{
         font-size: 36px;
     }
@@ -104,5 +92,46 @@
     }
     .large .proj-icon{
         font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #flower{
+        flex: 2;
+    }
+    #flower #container{
+        font-size: 24px;
+    }
+    .home-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items:center;
+    }
+    #home-right-side{
+        flex: 1;
+    }
+    .about-me-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .home-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    #flower #container{
+        flex: 1;
+        font-size: 12px;
+    }
+    #home-right-side{
+        flex: 2;
     }
 }
